@@ -21,7 +21,7 @@ Available tools:
 ### consistent problem: sometimes it's the tool not the agent
 Initially the agent seemed to ignore the output of the tools it called. An example of this is the query_db tool, where it tried to determine the existence of transmission line with the ID `2`. In the logs (image below) that line_id 2 exists but Execution logs show `None` resulting in the final answer: "There is no maintenance history available for line ID 2..."
 
-![image](homework-1/images/tool-bug.png)
+![image](images/tool-bug.png)
 
 After some debugging and using the tool myself I found that even though the .show in the tool would display the rows, the output of the tool was `NoneType`.
 
